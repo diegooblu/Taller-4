@@ -1,6 +1,6 @@
 public class PrimeraEvolucion extends Pokemon{
 
-    private String evolucionBasica;
+    private final String evolucionBasica;
 
     private String evolucionSiguiente;
 
@@ -11,10 +11,6 @@ public class PrimeraEvolucion extends Pokemon{
 
     public String getEvolucionBasica() {
         return evolucionBasica;
-    }
-
-    public void setEvolucionBasica(String evolucionBasica) {
-        this.evolucionBasica = evolucionBasica;
     }
 
     public String getEvolucionSiguiente() {

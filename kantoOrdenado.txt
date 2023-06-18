@@ -17,6 +17,7 @@
 24,Arbok,PrimeraEvolucion,Ekans,Veneno,Veneno
 25,Pikachu,Basico,Raichu,Electrico,Electrico
 26,Raichu,PrimeraEvolucion,Pikachu,Electrico,Electrico
+27,Eevee,Basico,Vaporeon,Jolteon,Flareon,Normal,Normal
 28,Vaporeon,PrimeraEvolucion,Eevee,Agua,Agua
 29,Jolteon,PrimeraEvolucion,Eevee,Electrico,Electrico
 3,Venusaur,SegundaEvolucion,Ivysaur,Bulbasaur,Hierba,Veneno
@@ -27,4 +28,3 @@
 7,Squirtle,Basico,Wartortle,Blastoise,Agua,Agua
 8,Wartortle,PrimeraEvolucion,Blastoise,Squirtle,Agua,Agua
 9,Blastoise,SegundaEvolucion,Wartortle,Squirtle,Agua,Agua
-

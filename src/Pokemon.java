@@ -1,12 +1,12 @@
 public class Pokemon {
 
-    private int id;
-    private String nombre;
-    private String etapa;
+    private final int id;
+    private final String nombre;
+    private final String etapa;
     private String primeraEvolucion;
     private String segundaEvolucion;
-    private String tipo1;
-    private String tipo2;
+    private final String tipo1;
+    private final String tipo2;
 
     public Pokemon(int id, String nombre, String etapa, String tipo1, String tipo2) {
         this.id = id;

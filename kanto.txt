@@ -1,6 +1,7 @@
  29, Jolteon,Primera Evolucion, Eevee, Electrico, Electrico
 
 
+27, Eevee, Basico ,Vaporeon , Jolteon ,Flareon, Normal, Normal
 
 
 13, Weedle, Basico, Kakuna, Beedrill,Insecto, Insecto

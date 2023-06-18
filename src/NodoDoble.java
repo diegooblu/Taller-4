@@ -8,10 +8,6 @@ public class NodoDoble {
         Dato = dato;
     }
 
-    public void setDato(Pokemon dato) {
-        Dato = dato;
-    }
-
     public void setAnterior(NodoDoble anterior) {
         Anterior = anterior;
     }
@@ -22,10 +18,6 @@ public class NodoDoble {
 
     public Pokemon getDato() {
         return Dato;
-    }
-
-    public NodoDoble getAnterior() {
-        return Anterior;
     }
 
     public NodoDoble getSiguiente() {
