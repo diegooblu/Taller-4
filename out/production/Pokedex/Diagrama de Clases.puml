@@ -1,0 +1,86 @@
+@startuml
+
+package Diagrama {
+
+class Pokemon {
+-id: int
+-nombre: String
+-etapa: String
+-primeraEvolucion: String
+-SegundaEvolucion: String
+-tipo1: String
+-tipo2: String
++Pokemon(id: int,nombre: String,etapa: String,tipo1: String,tipo2: String)
++gets() & sets()
+}
+Pokemon -down|> PrimeraEvolucion
+Pokemon -down|> SegundaEvolucion
+Pokemon -down|> TerceraEvolucion
+
+class PrimeraEvolucion {
+-evolucionBasica: String
+-segundaEvolucion: String
++PrimeraEvolucion(id: int,nombre: String,etapa: String,tipo1: String,
+tipo2: String,evolucionBasica: String)
++gets() & sets()
+}
+
+class SegundaEvolucion {
+-evolucionPrevia: String
+-evolucionBasica: String
++SegundaEvolucion(id: int,nombre: String,etapa: String,tipo1: String,
+tipo2: String,evolucion, evolucionBasica: String, evolucionPrevia: String)
++gets() & sets()
+}
+
+class TerceraEvolucion {
+-evolucionPrevia2: String
+-evolucionPrevia1: String
+-evolucionBasica: String
++TerceraEvolucion(id: int,nombre: String,etapa: String,tipo1: String,tipo2: String,
+evolucionBasica: String, evolucionPrevia1: String, evolucionPrevia2: String)
++gets() & sets()
+}
+
+class NodoDoble {
+-dato: Pokemon
+-anterior: NodoDoble
+-siguiente: NodoDoble
++NodoDoble (dato: pokemon)
++gets() & sets()
+}
+NodoDoble -down>"2" NodoDoble
+NodoDoble -down-> Pokemon
+
+class ListaNodoDoble {
+-head: NodoDoble
+-tail: NodoDoble
++ListaNodoDoble()
++insertarFinalHead(dato: pokemon): void
++insertarFinalTail(dato: pokemon): void
++recorrer(): void
++gets() & sets()
+}
+ListaNodoDoble o->"2" NodoDoble : Almacena
+}
+
+package servicios {
+
+interface Sistema {
++LecturaArchivo(): void
++Menu(): void
++DesplegarPokemonRangoNumero(rango1: int,rango2: int): void
++DesplegarPokemonOrdenados(): void
++DesplegarTipoPokemon(tipoSeleccionado: String): void
++DesplegarPrimeraEvolucion(): void
++BusquedaPersonalizada(): void
+}
+
+class SistemaImpl {
+-listaNodoDoble: ListaNodoDoble
++SistemaImpl()
+}
+SistemaImpl -|> Sistema
+SistemaImpl --> ListaNodoDoble
+}
+@enduml
