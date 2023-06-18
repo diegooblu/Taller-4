@@ -62,7 +62,34 @@ public class ListaNodoDoble {
     }
 
     public void desplegarPrimeraEvolucion() {
-
+        ArrayList<Integer> listaOrdenar = new ArrayList<>();
+        NodoDoble aux = this.head;
+        Pokemon pokemon;
+        while (aux != null){
+            pokemon = aux.getDato();
+            listaOrdenar.add(pokemon.getId());
+            aux = aux.getSiguiente();
+        }
+        //Se ordena de manera decreciente los pokemons mediante su id
+        listaOrdenar.sort(Collections.reverseOrder());
+        aux = this.head;
+        int tamanio = listaOrdenar.size();
+        int contador = 0;
+        //Ciclo que entrega los pokemons en orden mediante la lista Array
+        while (contador!= tamanio) {
+            pokemon = aux.getDato();
+            int ID = pokemon.getId();
+            if (listaOrdenar.get(contador) == ID){
+                if (pokemon.getEtapa().equalsIgnoreCase("PrimeraEvolucion")) {
+                    desplegarPokemon(pokemon);
+                }
+                contador++;
+            }
+            aux = aux.getSiguiente();
+            if (aux == null){
+                aux = this.head;
+            }
+        }
     }
 
     /**
@@ -136,7 +163,7 @@ public class ListaNodoDoble {
         //Ciclo el cual entregara ordenadamente los pokemons
         while (contador != tamanio) {
             String nombre = pokemon.getNombre();
-            if(listaOrdenar.get(contador).equalsIgnoreCase(nombre)){
+            if (listaOrdenar.get(contador).equalsIgnoreCase(nombre)) {
                 desplegarPokemon(pokemon);
                 contador++;
             }
