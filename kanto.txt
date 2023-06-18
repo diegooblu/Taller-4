@@ -75,3 +75,4 @@
 21, Spearow, Basico, Fearow, Normal, Volador 
 
 30, Flareon, Primera Evolucion, Eevee, Fuego, Fuego
+

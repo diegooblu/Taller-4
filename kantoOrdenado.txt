@@ -27,3 +27,4 @@
 7,Squirtle,Basico,Wartortle,Blastoise,Agua,Agua
 8,Wartortle,PrimeraEvolucion,Blastoise,Squirtle,Agua,Agua
 9,Blastoise,SegundaEvolucion,Wartortle,Squirtle,Agua,Agua
+

@@ -111,16 +111,16 @@ public class ListaNodoDoble {
         int tamanio = listaOrdenar.size();
         int contador = 0;
         while (contador != tamanio) {
-            String nombre = listaOrdenar.get(contador);
-            String auxNombre = pokemon.getNombre();
-            if (nombre.equals(auxNombre)) {
+            String nombre = pokemon.getNombre();
+            if(listaOrdenar.get(contador).equalsIgnoreCase(nombre)){
                 desplegarPokemon(pokemon);
                 contador++;
             }
+            aux1 = aux1.getSiguiente();
             if (aux1 == null) {
                 aux1 = this.head;
             }
-            aux1 = aux1.getSiguiente();
+            pokemon = aux1.getDato();
         }
     }
 
