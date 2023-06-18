@@ -15,7 +15,6 @@ class Pokemon {
 }
 Pokemon -down|> PrimeraEvolucion
 Pokemon -down|> SegundaEvolucion
-Pokemon -down|> TerceraEvolucion
 
 class PrimeraEvolucion {
 -evolucionBasica: String
@@ -33,20 +32,11 @@ tipo2: String,evolucion, evolucionBasica: String, evolucionPrevia: String)
 +gets() & sets()
 }
 
-class TerceraEvolucion {
--evolucionPrevia2: String
--evolucionPrevia1: String
--evolucionBasica: String
-+TerceraEvolucion(id: int,nombre: String,etapa: String,tipo1: String,tipo2: String,
-evolucionBasica: String, evolucionPrevia1: String, evolucionPrevia2: String)
-+gets() & sets()
-}
-
 class NodoDoble {
 -dato: Pokemon
 -anterior: NodoDoble
 -siguiente: NodoDoble
-+NodoDoble (dato: pokemon)
++NodoDoble (dato: Pokemon)
 +gets() & sets()
 }
 NodoDoble -down>"2" NodoDoble
@@ -56,9 +46,12 @@ class ListaNodoDoble {
 -head: NodoDoble
 -tail: NodoDoble
 +ListaNodoDoble()
-+insertarFinalHead(dato: pokemon): void
-+insertarFinalTail(dato: pokemon): void
-+recorrer(): void
++insertarFinalHead(dato: Pokemon): void
++desplegarPokemon(pokemon: Pokemon): void
++deplegarTipo(tipo: String): void
++busquedaPId(id: int): void
++busquedaPNombre(nombre: String): void
++busquedaPersonalizada(pokemon: Pokemon): void
 +gets() & sets()
 }
 ListaNodoDoble o->"2" NodoDoble : Almacena
@@ -69,9 +62,9 @@ package servicios {
 interface Sistema {
 +LecturaArchivo(): void
 +Menu(): void
-+DesplegarPokemonRangoNumero(rango1: int,rango2: int): void
++DesplegarPokemonRangoNumero(): void
 +DesplegarPokemonOrdenados(): void
-+DesplegarTipoPokemon(tipoSeleccionado: String): void
++DesplegarTipoPokemon(): void
 +DesplegarPrimeraEvolucion(): void
 +BusquedaPersonalizada(): void
 }
